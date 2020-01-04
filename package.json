@@ -1,0 +1,31 @@
+{
+  "name": "@lambocreeper/json-linter",
+  "version": "1.0.1",
+  "description": "A simple JSON linter.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node build/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LamboCreeper/json-linter.git"
+  },
+  "keywords": [
+    "json",
+    "linter",
+    "lint"
+  ],
+  "author": "LamboCreeper",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/LamboCreeper/json-linter/issues"
+  },
+  "homepage": "https://github.com/LamboCreeper/json-linter#readme",
+  "devDependencies": {
+    "@types/node": "^13.1.4"
+  },
+  "dependencies": {
+    "stratter": "^1.0.1"
+  }
+}
