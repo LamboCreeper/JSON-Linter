@@ -1,6 +1,12 @@
-import bufferToJson from "./bufferToJSON";
+import fs from "fs";
+import util from "util";
+
+import bufferToJson from "../helpers/bufferToJSON";
+
+const readFile = util.promisify(fs.readFile);
 
 async function lintFile(file: string) {
+
 	let errors: string[] = [];
 
 	try {
@@ -10,6 +16,8 @@ async function lintFile(file: string) {
 	} catch (error) {
 		if (error instanceof SyntaxError) {
 			errors.push(error.message);
+		} else {
+			throw new Error(error);
 		}
 	}
 
